@@ -1,4 +1,4 @@
-# Issue with moving kubernetes resources into child module
+# Issue moving kubernetes resources into child module and adding provider alias
 
 
 ## Prerequisits
