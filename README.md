@@ -1,7 +1,7 @@
-# Issue with moving kubernetes resources into child module
+# Issue moving kubernetes resources into child module and adding provider alias
 
 
-## Prerequisits
+## Prerequisites
 
 1. "minikube" need to be installed and run: `minikube start`
 
@@ -22,5 +22,21 @@ Plan should be shown.
 ### Actual Behavior
 The error is shown:
 ```
-
+kubernetes_namespace.test: Refreshing state... [id=nginx]
+kubernetes_service.test: Refreshing state... [id=nginx/nginx]
+kubernetes_deployment.test: Refreshing state... [id=nginx/nginx]
+╷
+│ Error: Get "http://localhost/apis/apps/v1/namespaces/nginx/deployments/nginx": dial tcp [::1]:80: connectex: No connection could be made because the target machine actively refused it.
+│
+│
+╵
+╷
+│ Error: Get "http://localhost/api/v1/namespaces/nginx": dial tcp [::1]:80: connectex: No connection could be made because the target machine actively refused it.
+│
+│
+╵
+╷
+│ Error: Get "http://localhost/api/v1/namespaces/nginx/services/nginx": dial tcp [::1]:80: connectex: No connection could be made because the target machine actively refused it.
+│
+│
 ```
