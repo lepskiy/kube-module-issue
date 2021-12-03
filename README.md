@@ -1,7 +1,7 @@
 # Issue moving kubernetes resources into child module and adding provider alias
 
 
-## Prerequisits
+## Prerequisites
 
 1. "minikube" need to be installed and run: `minikube start`
 
